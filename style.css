@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -5,15 +6,66 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-}
-input, button {
-    margin: 10px;
+    padding: 0;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
     padding: 10px;
-    font-size: 16px;
 }
+
+h1 {
+    font-size: 8vw; /* Adjust size relative to screen width */
+    margin: 0 0 20px 0;
+}
+
+p {
+    font-size: 5vw;
+    margin: 10px 0;
+}
+
 #message, #score {
+    font-size: 4.5vw;
+    margin: 15px 0;
+}
+
+input, button {
+    font-size: 5vw;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%; /* Stretch input and button to edge */
+    max-width: 400px; /* Limit for larger screens */
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
     margin-top: 20px;
-    font-weight: bold;
+    max-width: 80%; /* Scale down for smaller screens */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 9vw;
+    }
+    p, #message, #score {
+        font-size: 6vw;
+    }
+    input, button {
+        font-size: 6vw;
+    }
 }
